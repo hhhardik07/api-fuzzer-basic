@@ -1,0 +1,32 @@
+[
+  {
+    "id": "get-profile",
+    "method": "GET",
+    "url": "http://localhost:8765/api/profile",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "testStrategy": "BASELINE"
+  },
+  {
+    "id": "get-courses",
+    "method": "GET",
+    "url": "http://localhost:8765/api/courses",
+    "headers": {
+      "Accept": "application/json"
+    },
+    "body": null,
+    "testStrategy": "BASELINE"
+  },
+  {
+    "id": "post-search",
+    "method": "POST",
+    "url": "http://localhost:8765/api/search",
+    "headers": {
+      "Content-Type": "application/json"
+    },
+    "body": "{\"query\":\"computer science\"}",
+    "testStrategy": "BASELINE"
+  }
+]

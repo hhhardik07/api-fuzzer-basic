@@ -1,0 +1,44 @@
+{
+  "portalHostname": "portal.example.edu",
+  "approvedPathPrefixes": [
+    "/api/v1/profile",
+    "/api/v1/courses",
+    "/api/v1/grades",
+    "/api/v1/attendance"
+  ],
+  "approvedMethods": ["GET"],
+  "maxRequestsPerSession": 50,
+  "requestsPerSecond": 1,
+  "requestTimeoutSeconds": 10,
+  "testHeaders": {
+    "Accept": "application/json",
+    "User-Agent": "api-fuzzer-basic/1.0 (college demo)"
+  },
+  "testAccount": {
+    "profileName": "college-portal",
+    "authType": "BEARER",
+    "credential": "PLACEHOLDER: Replace with actual test account token"
+  },
+  "demoSeeds": [
+    {
+      "id": "get-my-profile",
+      "method": "GET",
+      "path": "/api/v1/profile/me"
+    },
+    {
+      "id": "get-enrolled-courses",
+      "method": "GET",
+      "path": "/api/v1/courses/enrolled"
+    },
+    {
+      "id": "get-current-grades",
+      "method": "GET",
+      "path": "/api/v1/grades/current"
+    },
+    {
+      "id": "get-attendance-summary",
+      "method": "GET",
+      "path": "/api/v1/attendance/summary"
+    }
+  ]
+}
