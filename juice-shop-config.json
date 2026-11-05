@@ -1,0 +1,31 @@
+{
+  "portalHostname": "localhost:3000",
+  "protocol": "http",
+  "approvedPathPrefixes": [
+    "/rest",
+    "/api",
+    "/assets"
+  ],
+  "approvedMethods": ["GET", "POST", "PUT", "DELETE", "PATCH"],
+  "maxRequestsPerSession": 300,
+  "requestsPerSecond": 10,
+  "requestTimeoutSeconds": 15,
+  "testHeaders": {
+    "Accept": "application/json",
+    "Content-Type": "application/json"
+  },
+  "testAccount": {
+    "profileName": "juice-shop",
+    "authType": "NONE",
+    "credential": "none"
+  },
+  "demoSeeds": [
+    { "id": "get-products-search", "method": "GET", "path": "/rest/products/search?q=apple" },
+    { "id": "get-product-by-id", "method": "GET", "path": "/rest/products/1" },
+    { "id": "user-login", "method": "POST", "path": "/rest/user/login", "body": "{\"email\":\"test@juice-sh.op\",\"password\":\"test123\"}" },
+    { "id": "submit-feedback", "method": "POST", "path": "/api/Feedbacks/", "body": "{\"comment\":\"Great service!\",\"rating\":5}" },
+    { "id": "get-basket", "method": "GET", "path": "/rest/basket/1" },
+    { "id": "file-upload", "method": "POST", "path": "/file-upload", "body": "{\"file\":\"test.txt\"}" },
+    { "id": "track-order", "method": "POST", "path": "/api/TrackOrder/", "body": "{\"id\":\"1\"}" }
+  ]
+}
